@@ -19,12 +19,15 @@
 	import flash.display.Bitmap;
 	import flash.display.BitmapData;
 	import flash.geom.Rectangle;
+	import flash.display.MovieClip;
+	import flash.net.URLLoader;
+	import flash.net.URLLoaderDataFormat;
 	
 	/**
 	 * ...
 	 * @author Hadi Tavakoli - 1/29/2016 1:17 AM
 	 */
-	public class Main extends Sprite
+	public class Main extends MovieClip
 	{
 		private var _myWorker:WorkerManager;
 		private var _txt:TextField;
@@ -38,7 +41,7 @@
 			_txt.x = _txt.y = 50;
 			this.addChild(_txt);
 			
-			loadX();
+			//loadX(1);
 			
 			// init the Manager and pass the class you want to use as your Worker
 			_myWorker = new WorkerManager(workers.Worker1, loaderInfo.bytes, this);
@@ -51,17 +54,72 @@
 			
 			this["a"].addEventListener(MouseEvent.CLICK, mouseClicked);		
 		}
+		private var counter:Number=1;
 		function mouseClicked(e:Event){
 			
-				_myWorker.command("loadImage", onProgress_image, onResult_image, testbyte);
+			for(var i:uint = 1;i<=24;i++){
+				loadX(counter);
+			}			
+			
+			
+			
+			
+				//e.currentTarget.alpha=0.1;			
+		}
+		private function loadX(name) {
+			//var imageLoader:Loader = new Loader();
+			var request:URLRequest = new URLRequest("pic/" +  name +  ".png");				
+			//imageLoader.load(request);
+			var rlLoader:URLLoader = new URLLoader();
+			rlLoader.dataFormat = URLLoaderDataFormat.BINARY ; 
+			rlLoader.addEventListener(Event.COMPLETE,byteLoaded);
+			rlLoader.load(request);
+			
+
+			function byteLoaded(e):void
+			{
+				var byteArray:ByteArray = rlLoader.data as ByteArray;
+			
+				_myWorker.command("loadImage", onProgress_image, onResult_image, byteArray);
+				_txt.text = byteArray.length+"";
+				
+				return
+				var loader:Loader = new Loader();
+				loader.loadBytes(byteArray);
+				loader.contentLoaderInfo.addEventListener(Event.COMPLETE,function s(e){
+					_txt.text = "FARD"+"" ;
+					addChild(loader.content)
+				});
+				//this.addChild(loader.contentLoaderInfo.content)
+			}
+			
+			
+			/*imageLoader.contentLoaderInfo.addEventListener(Event.COMPLETE, function ff (event) {
+				return
+				var loaderInfo:LoaderInfo = LoaderInfo(event.target);
+				var byteArray:ByteArray = loaderInfo.bytes;
+				
+				//imageLoader.x=380
+				//addChild(imageLoader);
+				
+				//return
+			
+				_myWorker.command("loadImage", onProgress_image, onResult_image, byteArray);
 				_txt.text = _myWorker.state;
-				e.currentTarget.alpha=0.1			
+
+				//trace(byteArray);
+				
+				
+				
+			} 
+			);	*/	
 		}
 		private function onProgress_image($progress:*,W:*,H:*):void
 		{
 
 			try{
 				_txt.text = '1 : '+W+','+H;
+				
 				
 				
 				/*
@@ -76,7 +134,8 @@
 				_txt.text = '3';
 				var bit:Bitmap = new Bitmap(bitData);
 				_txt.text = '4 : '+bit.bitmapData.getPixel(0,0).toString(16);
-				
+				bit.x = 380
+				bit.alpha=Math.random()*100;
 				addChild(bit)
 
 			}catch(e:Error){
@@ -85,6 +144,7 @@
 			return
 			
 			var bmp:Bitmap = new Bitmap($progress.clone());
+			
 			addChild(bmp);
 			_txt.text = "img"+$progress.toString();
 		}
@@ -101,24 +161,7 @@
 			// terminate the worker when you're done with it.
 			_myWorker.terminate();
 		}		
-		private function loadX() {
-			var imageLoader:Loader = new Loader();
-			var request:URLRequest = new URLRequest("a.jpg");				
-			imageLoader.load(request);
-
-			imageLoader.contentLoaderInfo.addEventListener(Event.COMPLETE, function ff (event) {
-				
-				var loaderInfo:LoaderInfo = LoaderInfo(event.target);
-				var byteArray:ByteArray = loaderInfo.bytes;
-				testbyte = byteArray;
-				
-				//trace(byteArray);
-				
-				
-				
-			} 
-			);		
-		}
+		
 		private function onWorkerState(e:Event):void
 		{
 			trace("worker state = " + _myWorker.state)

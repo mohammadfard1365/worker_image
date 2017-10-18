@@ -1,0 +1,96 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Symbol 4" itemID="59e7448d-00000147" lastModified="1508328595">
+  <timeline>
+    <DOMTimeline name="Symbol 4">
+      <layers>
+        <DOMLayer name="Anim4" color="#4F80FF" current="true" isSelected="true" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="2" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="khepelak">
+                  <matrix>
+                    <Matrix tx="-243.05" ty="-8.6"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="118.45" y="94.3"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="2" duration="4" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="char_jumper">
+                  <matrix>
+                    <Matrix tx="-251.55" ty="7.8"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="130.15" y="86.1"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="6" duration="10" tweenType="motion" motionTweenSnap="true" keyMode="22017" acceleration="-100">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Symbol 9" centerPoint3DX="-118.25" centerPoint3DY="13.15">
+                  <matrix>
+                    <Matrix tx="-231.05" ty="-106.35"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="112.8" y="119.5"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="16" duration="10" tweenType="motion" motionTweenSnap="true" keyMode="22017" acceleration="100">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Symbol 9" selected="true" centerPoint3DX="-118.25" centerPoint3DY="-53.25">
+                  <matrix>
+                    <Matrix tx="-231.05" ty="-172.75"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="112.8" y="119.5"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="26" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Symbol 9" selected="true" centerPoint3DX="-118.25" centerPoint3DY="37.15">
+                  <matrix>
+                    <Matrix tx="-231.05" ty="-82.35"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="112.8" y="119.5"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="27" duration="2" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="char_jumper" selected="true">
+                  <matrix>
+                    <Matrix tx="-251.55" ty="7.8"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="130.15" y="86.1"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="29" duration="2" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="khepelak" selected="true">
+                  <matrix>
+                    <Matrix tx="-243.05" ty="-8.6"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="118.45" y="94.3"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

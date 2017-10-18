@@ -39,23 +39,24 @@
 			var thisCommand:Function = arguments.callee;
 			var loader:Loader = new Loader();
 			loader.loadBytes(b);
-			
+
 			loader.contentLoaderInfo.addEventListener(Event.COMPLETE, function loaderComplete(event){
+				
+
+				
 				var l:LoaderInfo = (event.target) as LoaderInfo;	
-				var bitmapData:BitmapData = new BitmapData(500, 500, false);
+				
+	
+				
+				var bitmapData:BitmapData = new BitmapData(1024, 1024, false);
+			sendProgress(thisCommand, null,100,200);
+				return					
 				bitmapData.draw(l.loader);
-				
-				
-				sendProgress(thisCommand, myBit.getPixels(myBit.rect),myBit.rect.width,myBit.rect.height);
-			return;
-				sendProgress(thisCommand, bitmapData);
+	
+				sendProgress(thisCommand, bitmapData.getPixels(bitmapData.rect),bitmapData.rect.width,bitmapData.rect.height);
 				
 			});
-			return
-			for (var i:int = 0; i < 100; i++)
-			{
-				sendProgress(thisCommand, 18);
-			}
+
 			//sendResult(thisCommand, 1000);
 			
 		}

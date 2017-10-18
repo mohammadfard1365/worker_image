@@ -1,21 +1,80 @@
-<DOMDocument xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" currentTimeline="1" xflVersion="2.7" creatorInfo="Adobe Animate CC" platform="Windows" versionInfo="Saved by Animate Windows 15.1 build 210" majorVersion="15" minorVersion="1" buildNumber="210" previewMode="full" nextSceneIdentifier="2" playOptionsPlayLoop="false" playOptionsPlayPages="false" playOptionsPlayFrameActions="false" filetypeGUID="DD0DDBBF-5BEF-45B2-9F24-A3048D2A676F">
+<DOMDocument xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" width="1024" height="900" frameRate="60" currentTimeline="1" xflVersion="2.7" creatorInfo="Adobe Animate CC" platform="Windows" versionInfo="Saved by Animate Windows 15.1 build 210" majorVersion="15" minorVersion="1" buildNumber="210" viewAngle3D="88.2079048186946" previewMode="full" nextSceneIdentifier="2" playOptionsPlayLoop="false" playOptionsPlayPages="false" playOptionsPlayFrameActions="false" filetypeGUID="DD0DDBBF-5BEF-45B2-9F24-A3048D2A676F">
      <symbols>
+          <Include href="char_jumper.xml" loadImmediate="false" itemID="58b08da7-00000f48" lastModified="1487975078"/>
+          <Include href="khepelak.xml" loadImmediate="false" itemID="58b08d97-00000f41" lastModified="1487965591"/>
           <Include href="Symbol 1.xml" itemIcon="0" loadImmediate="false" itemID="59e709f8-00000127" lastModified="1508313592"/>
           <Include href="Symbol 2.xml" itemIcon="0" loadImmediate="false" itemID="59e70eb2-0000012d" lastModified="1508314802"/>
+          <Include href="Symbol 3.xml" itemIcon="0" loadImmediate="false" itemID="59e74484-00000142" lastModified="1508328580"/>
+          <Include href="Symbol 4.xml" loadImmediate="false" itemID="59e7448d-00000147" lastModified="1508328595"/>
+          <Include href="Symbol 5.xml" loadImmediate="false" itemID="59e74a44-0000015a" lastModified="1508330052"/>
+          <Include href="Symbol 9.xml" loadImmediate="false" itemID="58b1a615-0000046a" lastModified="1487966002"/>
      </symbols>
      <timelines>
           <DOMTimeline name="Scene 1">
                <layers>
+                    <DOMLayer name="Layer 5" color="#009999">
+                         <frames>
+                              <DOMFrame index="0" keyMode="9728">
+                                   <Actionscript>
+                                        <script><![CDATA[import flash.display.Shape;
+import flash.utils.getTimer;
+
+var shape: Shape=new Shape();
+var bitmap: Bitmap;
+bitmap = new Bitmap(new BitmapData(100, 100, false, 0x0));
+addChild(bitmap);
+
+function onFrame(e: Event): void {
+
+	var t: Number = getTimer();
+
+
+
+
+	// Animate spinner
+	shape.graphics.clear();
+	shape.graphics.beginFill(0x0, 0.05);
+	shape.graphics.drawRect(0, 0, 100, 100);
+	bitmap.bitmapData.draw(shape);
+	shape.graphics.clear();
+	shape.graphics.lineStyle(3, 0x0000ff, 1, true);
+	shape.graphics.drawCircle(50, 50, 46);
+	shape.graphics.moveTo(50, 50);
+	shape.graphics.lineTo(50 + 45 * Math.cos(t / 300), 50 + 45 * Math.sin(t / 300));
+	bitmap.bitmapData.draw(shape);
+}
+this.addEventListener(Event.ENTER_FRAME, onFrame);]]></script>
+                                   </Actionscript>
+                                   <elements/>
+                              </DOMFrame>
+                         </frames>
+                    </DOMLayer>
                     <DOMLayer name="Layer 3" color="#FF800A" current="true" isSelected="true">
                          <frames>
                               <DOMFrame index="0" keyMode="9728">
                                    <elements>
-                                        <DOMSymbolInstance libraryItemName="Symbol 2" name="a" symbolType="button">
+                                        <DOMSymbolInstance libraryItemName="Symbol 2" name="a" selected="true" symbolType="button">
                                              <matrix>
-                                                  <Matrix tx="126.35" ty="132.5"/>
+                                                  <Matrix tx="22.3" ty="374.6"/>
                                              </matrix>
                                              <transformationPoint>
                                                   <Point x="67.75" y="67.75"/>
+                                             </transformationPoint>
+                                        </DOMSymbolInstance>
+                                   </elements>
+                              </DOMFrame>
+                         </frames>
+                    </DOMLayer>
+                    <DOMLayer name="Layer 4" color="#FF4FFF">
+                         <frames>
+                              <DOMFrame index="0" keyMode="9728">
+                                   <elements>
+                                        <DOMSymbolInstance libraryItemName="Symbol 4">
+                                             <matrix>
+                                                  <Matrix tx="221.1" ty="719.95"/>
+                                             </matrix>
+                                             <transformationPoint>
+                                                  <Point/>
                                              </transformationPoint>
                                         </DOMSymbolInstance>
                                    </elements>
@@ -52,25 +111,25 @@
      </persistentData>
      <PrinterSettings/>
      <publishHistory>
-          <PublishItem publishSize="153028" publishTime="1508322454"/>
-          <PublishItem publishSize="152981" publishTime="1508322422"/>
-          <PublishItem publishSize="153038" publishTime="1508322381"/>
-          <PublishItem publishSize="152997" publishTime="1508322351"/>
-          <PublishItem publishSize="153021" publishTime="1508322304"/>
-          <PublishItem publishSize="152936" publishTime="1508322250"/>
-          <PublishItem publishSize="152930" publishTime="1508322218"/>
-          <PublishItem publishSize="152983" publishTime="1508322177"/>
-          <PublishItem publishSize="153028" publishTime="1508322129"/>
-          <PublishItem publishSize="224" publishTime="1508322113"/>
-          <PublishItem publishSize="152917" publishTime="1508321963"/>
-          <PublishItem publishSize="152828" publishTime="1508321955"/>
-          <PublishItem publishSize="152728" publishTime="1508321879"/>
-          <PublishItem publishSize="152964" publishTime="1508321783"/>
-          <PublishItem publishSize="152924" publishTime="1508321664"/>
-          <PublishItem publishSize="152851" publishTime="1508321490"/>
-          <PublishItem publishSize="152827" publishTime="1508318932"/>
-          <PublishItem publishSize="152928" publishTime="1508318887"/>
-          <PublishItem publishSize="152902" publishTime="1508318833"/>
-          <PublishItem publishSize="224" publishTime="1508318811"/>
+          <PublishItem publishSize="163526" publishTime="1508333500"/>
+          <PublishItem publishSize="163478" publishTime="1508333407"/>
+          <PublishItem publishSize="163480" publishTime="1508333375"/>
+          <PublishItem publishSize="163468" publishTime="1508333347"/>
+          <PublishItem publishSize="163511" publishTime="1508333320"/>
+          <PublishItem publishSize="163311" publishTime="1508333242"/>
+          <PublishItem publishSize="163635" publishTime="1508333106"/>
+          <PublishItem publishSize="163631" publishTime="1508333070"/>
+          <PublishItem publishSize="163452" publishTime="1508332752"/>
+          <PublishItem publishSize="9226" publishTime="1508332744"/>
+          <PublishItem publishSize="163461" publishTime="1508332701"/>
+          <PublishItem publishSize="163615" publishTime="1508332619"/>
+          <PublishItem publishSize="163570" publishTime="1508332590"/>
+          <PublishItem publishSize="163405" publishTime="1508332497"/>
+          <PublishItem publishSize="9226" publishTime="1508332471"/>
+          <PublishItem publishSize="163595" publishTime="1508332432"/>
+          <PublishItem publishSize="9226" publishTime="1508331761"/>
+          <PublishItem publishSize="163395" publishTime="1508331279"/>
+          <PublishItem publishSize="163311" publishTime="1508331160"/>
+          <PublishItem publishSize="163433" publishTime="1508331146"/>
      </publishHistory>
 </DOMDocument>
