@@ -7,6 +7,8 @@
 	import flash.display.BitmapData;
 	import flash.display.LoaderInfo;
 	import flash.display.Bitmap;
+	import flash.system.LoaderContext;
+	import flash.system.ApplicationDomain;
 	
 	/**
 	 * ...
@@ -38,22 +40,39 @@
 		public function loadImage(b:ByteArray) {
 			var thisCommand:Function = arguments.callee;
 			var loader:Loader = new Loader();
-			loader.loadBytes(b);
+			var context:LoaderContext = new LoaderContext(false,ApplicationDomain.currentDomain);
+			//context.allowLoadBytesCodeExecution = true;
+			//context.allowCodeImport = true ;
+			//context.allowLoadBytesCodeExecution = true ;
+				sendProgress(thisCommand, null,0,0,"HI");
+			return
+			loader.loadBytes(b,context);
 
 			loader.contentLoaderInfo.addEventListener(Event.COMPLETE, function loaderComplete(event){
 				
 
 				
-				var l:LoaderInfo = (event.target) as LoaderInfo;	
+				//var l:LoaderInfo = (event.target) as LoaderInfo;	
 				
-	
+				sendProgress(thisCommand, bitmapData.getPixels(bitmapData.rect),bitmapData.rect.width,bitmapData.rect.height,"HI");
+				return
 				
-				var bitmapData:BitmapData = new BitmapData(1024, 1024, false);
-			sendProgress(thisCommand, null,100,200);
-				return					
-				bitmapData.draw(l.loader);
-	
-				sendProgress(thisCommand, bitmapData.getPixels(bitmapData.rect),bitmapData.rect.width,bitmapData.rect.height);
+				var bitmapData:BitmapData = new BitmapData(100,100,false,0xff0000);//(loader.content as Bitmap).bitmapData;
+				
+				//bitmapData.draw(l.loader);
+				
+				//sendProgress(thisCommand, null,100,200);
+				var nam:String
+				try
+				{
+					nam = loader.content.toString();
+				}
+				catch(e)
+				{
+					nam = e.toString() ;
+				}
+				//return	
+				sendProgress(thisCommand, bitmapData.getPixels(bitmapData.rect),bitmapData.rect.width,bitmapData.rect.height,nam);
 				
 			});
 

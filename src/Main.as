@@ -38,7 +38,7 @@
 			_txt = new TextField();
 			_txt.autoSize = TextFieldAutoSize.LEFT;
 			_txt.defaultTextFormat = new TextFormat(null, 40);
-			_txt.x = _txt.y = 50;
+			_txt.x = _txt.y = 250;
 			this.addChild(_txt);
 			
 			//loadX(1);
@@ -114,9 +114,13 @@
 			} 
 			);	*/	
 		}
-		private function onProgress_image($progress:*,W:*,H:*):void
+		private function onProgress_image($progress:*,W:*,H:*,debu:*):void
 		{
-
+			if(debu!=null)
+			{
+				_txt.text = debu ;
+				return;
+			}
 			try{
 				_txt.text = '1 : '+W+','+H;
 				
