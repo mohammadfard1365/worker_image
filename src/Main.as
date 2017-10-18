@@ -18,6 +18,7 @@
 	import flash.events.MouseEvent;
 	import flash.display.Bitmap;
 	import flash.display.BitmapData;
+	import flash.geom.Rectangle;
 	
 	/**
 	 * ...
@@ -56,17 +57,27 @@
 				_txt.text = _myWorker.state;
 				e.currentTarget.alpha=0.1			
 		}
-		private function onProgress_image($progress:*):void
+		private function onProgress_image($progress:*,W:*,H:*):void
 		{
 
 			try{
+				_txt.text = '1 : '+W+','+H;
+				
 				
 				/*
 				for (var i in ($progress.tt)){
 					_txt.appendText(i.toString+":"+$progress.tt[i]);
 				}
 			*/
-				_txt.text = (JSON.stringify($progress,null," ")).toString()+"";
+				//_txt.text = $progress.toString()+"";
+				var bitData:BitmapData = new BitmapData(W,H);
+				_txt.text = '2';
+				bitData.setPixels(new Rectangle(0,0,W,H),$progress);
+				_txt.text = '3';
+				var bit:Bitmap = new Bitmap(bitData);
+				_txt.text = '4 : '+bit.bitmapData.getPixel(0,0).toString(16);
+				
+				addChild(bit)
 
 			}catch(e:Error){
 				_txt.text =e.message+e.getStackTrace();;

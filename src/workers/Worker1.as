@@ -6,6 +6,7 @@
 	import flash.events.Event;
 	import flash.display.BitmapData;
 	import flash.display.LoaderInfo;
+	import flash.display.Bitmap;
 	
 	/**
 	 * ...
@@ -45,7 +46,7 @@
 				bitmapData.draw(l.loader);
 				
 				
-				sendProgress(thisCommand, 989887);
+				sendProgress(thisCommand, myBit.getPixels(myBit.rect),myBit.rect.width,myBit.rect.height);
 			return;
 				sendProgress(thisCommand, bitmapData);
 				
