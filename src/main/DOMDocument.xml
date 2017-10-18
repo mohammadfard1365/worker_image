@@ -1,0 +1,76 @@
+<DOMDocument xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" currentTimeline="1" xflVersion="2.7" creatorInfo="Adobe Animate CC" platform="Windows" versionInfo="Saved by Animate Windows 15.1 build 210" majorVersion="15" minorVersion="1" buildNumber="210" previewMode="full" nextSceneIdentifier="2" playOptionsPlayLoop="false" playOptionsPlayPages="false" playOptionsPlayFrameActions="false" filetypeGUID="DD0DDBBF-5BEF-45B2-9F24-A3048D2A676F">
+     <symbols>
+          <Include href="Symbol 1.xml" itemIcon="0" loadImmediate="false" itemID="59e709f8-00000127" lastModified="1508313592"/>
+          <Include href="Symbol 2.xml" itemIcon="0" loadImmediate="false" itemID="59e70eb2-0000012d" lastModified="1508314802"/>
+     </symbols>
+     <timelines>
+          <DOMTimeline name="Scene 1">
+               <layers>
+                    <DOMLayer name="Layer 3" color="#FF800A" current="true" isSelected="true">
+                         <frames>
+                              <DOMFrame index="0" keyMode="9728">
+                                   <elements>
+                                        <DOMSymbolInstance libraryItemName="Symbol 2" name="a" symbolType="button">
+                                             <matrix>
+                                                  <Matrix tx="126.35" ty="132.5"/>
+                                             </matrix>
+                                             <transformationPoint>
+                                                  <Point x="67.75" y="67.75"/>
+                                             </transformationPoint>
+                                        </DOMSymbolInstance>
+                                   </elements>
+                              </DOMFrame>
+                         </frames>
+                    </DOMLayer>
+                    <DOMLayer name="Layer 1" color="#4F80FF" layerType="guide">
+                         <frames>
+                              <DOMFrame index="0" keyMode="9728">
+                                   <elements>
+                                        <DOMDynamicText name="nnnn" width="318" height="28.7" isSelectable="false" lineType="multiline no wrap">
+                                             <matrix>
+                                                  <Matrix tx="108.95" ty="20.3"/>
+                                             </matrix>
+                                             <textRuns>
+                                                  <DOMTextRun>
+                                                       <characters></characters>
+                                                       <textAttrs>
+                                                            <DOMTextAttrs alignment="right" aliasText="false" lineHeight="22.35" size="20" bitmapSize="400" face="_sans" fillColor="#0F406D"/>
+                                                       </textAttrs>
+                                                  </DOMTextRun>
+                                             </textRuns>
+                                        </DOMDynamicText>
+                                   </elements>
+                              </DOMFrame>
+                         </frames>
+                    </DOMLayer>
+               </layers>
+          </DOMTimeline>
+     </timelines>
+     <persistentData>
+          <PD n="ane.tmp.unzipped.folder" v="C:\Users\Persia\AppData\Local\Temp\Tmp_ANE_File_Unzipped_Packages"/>
+          <PD n="com.air.sdk.path"/>
+     </persistentData>
+     <PrinterSettings/>
+     <publishHistory>
+          <PublishItem publishSize="153028" publishTime="1508322454"/>
+          <PublishItem publishSize="152981" publishTime="1508322422"/>
+          <PublishItem publishSize="153038" publishTime="1508322381"/>
+          <PublishItem publishSize="152997" publishTime="1508322351"/>
+          <PublishItem publishSize="153021" publishTime="1508322304"/>
+          <PublishItem publishSize="152936" publishTime="1508322250"/>
+          <PublishItem publishSize="152930" publishTime="1508322218"/>
+          <PublishItem publishSize="152983" publishTime="1508322177"/>
+          <PublishItem publishSize="153028" publishTime="1508322129"/>
+          <PublishItem publishSize="224" publishTime="1508322113"/>
+          <PublishItem publishSize="152917" publishTime="1508321963"/>
+          <PublishItem publishSize="152828" publishTime="1508321955"/>
+          <PublishItem publishSize="152728" publishTime="1508321879"/>
+          <PublishItem publishSize="152964" publishTime="1508321783"/>
+          <PublishItem publishSize="152924" publishTime="1508321664"/>
+          <PublishItem publishSize="152851" publishTime="1508321490"/>
+          <PublishItem publishSize="152827" publishTime="1508318932"/>
+          <PublishItem publishSize="152928" publishTime="1508318887"/>
+          <PublishItem publishSize="152902" publishTime="1508318833"/>
+          <PublishItem publishSize="224" publishTime="1508318811"/>
+     </publishHistory>
+</DOMDocument>
