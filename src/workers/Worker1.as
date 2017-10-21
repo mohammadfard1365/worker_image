@@ -60,23 +60,18 @@
 		}
 		public function loadImage(b:ByteArray) {
 			var thisCommand:Function = arguments.callee;
-			var loader:Loader = new Loader();
-			
-			
-			
-			
+			var loader:Loader = new Loader();			
 			loader.loadBytes(b);
-			//sendProgress(thisCommand,100);
 			
 			
 			loader.contentLoaderInfo.addEventListener(Event.COMPLETE, function loaderComplete(event){
 				
 				
 				var l:LoaderInfo = (event.target) as LoaderInfo;	
-			
-				var bitmapData:BitmapData = new BitmapData(500, 500, false,0x000000);
+				var bitmapData:BitmapData = new BitmapData(1024, 1024, false);
 				
 				bitmapData.draw(l.loader);
+				//sendProgress(thisCommand,null,5,5,"333333");
 				sendProgress(thisCommand,bitmapData.getPixels(bitmapData.rect),bitmapData.rect.width,bitmapData.rect.height,"5555");
 				return;
 				

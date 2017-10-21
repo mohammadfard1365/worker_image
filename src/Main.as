@@ -57,8 +57,8 @@
 		private var counter:Number=1;
 		function mouseClicked(e:Event){
 			
-			_myWorker.command("loadFully", onProgress_image_fully, onResult_image, "1");
-			return;
+			//_myWorker.command("loadFully", onProgress_image_fully, onResult_image, "1");
+			//return;
 			for(var i:uint = 1;i<=24;i++){
 				loadX(counter);
 			}			
@@ -72,33 +72,33 @@
 			_txt.text=p;
 		}
 		private function loadX(name) {
-			//var imageLoader:Loader = new Loader();
+			
 			var request:URLRequest = new URLRequest("pic/" +  name +  ".png");				
 			//imageLoader.load(request);
-			var rlLoader:URLLoader = new URLLoader();
-			rlLoader.dataFormat = URLLoaderDataFormat.BINARY ; 
-			rlLoader.addEventListener(Event.COMPLETE,byteLoaded);
-			rlLoader.load(request);
-			
-
-			function byteLoaded(e):void
-			{
-				var byteArray:ByteArray = rlLoader.data as ByteArray;
+			var imageLoader:Loader=new Loader();
+			imageLoader.load(request);
+						
+			imageLoader.contentLoaderInfo.addEventListener(Event.COMPLETE, function ff (event) {
+				//return
+				var loaderInfo:LoaderInfo = LoaderInfo(event.target);
+				var byteArray:ByteArray = loaderInfo.bytes;
+				
+				//imageLoader.x=380
+				//addChild(imageLoader);
+				
+				//return
 			
 				_myWorker.command("loadImage", onProgress_image, onResult_image, byteArray);
 				_txt.text = byteArray.length+"";
+
+				//trace(byteArray);
 				
-				return
-				var loader:Loader = new Loader();
-				loader.loadBytes(byteArray);
-				loader.contentLoaderInfo.addEventListener(Event.COMPLETE,function s(e){
-					_txt.text = "FARD"+"" ;
-					addChild(loader.content)
-				});
-				//this.addChild(loader.contentLoaderInfo.content)
-			}
+				
+				
+			} 
+			);	
 			
-			
+
 			/*imageLoader.contentLoaderInfo.addEventListener(Event.COMPLETE, function ff (event) {
 				return
 				var loaderInfo:LoaderInfo = LoaderInfo(event.target);
@@ -123,7 +123,7 @@
 		{
 			if(debu!=null)
 			{
-				_txt.text = debu ;
+				_txt.text = debu+":D" ;
 				//return;
 			}
 			try{
