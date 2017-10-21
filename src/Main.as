@@ -119,7 +119,7 @@
 			if(debu!=null)
 			{
 				_txt.text = debu ;
-				return;
+				//return;
 			}
 			try{
 				_txt.text = '1 : '+W+','+H;

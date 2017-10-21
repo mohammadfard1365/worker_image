@@ -9,6 +9,7 @@
 	import flash.display.Bitmap;
 	import flash.system.LoaderContext;
 	import flash.system.ApplicationDomain;
+	import flash.system.SecurityDomain;
 	
 	/**
 	 * ...
@@ -40,22 +41,25 @@
 		public function loadImage(b:ByteArray) {
 			var thisCommand:Function = arguments.callee;
 			var loader:Loader = new Loader();
-			var context:LoaderContext = new LoaderContext(false,ApplicationDomain.currentDomain);
-			loader.loadBytes(b,context);
+			
+			loader.loadBytes(b);
+			//sendProgress(thisCommand,100);
+			
 			
 			loader.contentLoaderInfo.addEventListener(Event.COMPLETE, function loaderComplete(event){
-				var err:String ;
-				try
-				{
-					var l:LoaderInfo = (event.target) as LoaderInfo;	
-					var bitmapData:BitmapData = new BitmapData(1024, 1024, false);
-					bitmapData.draw(l.loader);
-				}
-				catch(e)
-				{
-					err = e.toString();
-				}
-				sendProgress(thisCommand, bitmapData.getPixels(bitmapData.rect),bitmapData.rect.width,bitmapData.rect.height,err);
+				
+				
+				var l:LoaderInfo = (event.target) as LoaderInfo;	
+			
+				var bitmapData:BitmapData = new BitmapData(500, 500, false,0x000000);
+				
+				//bitmapData.draw(l.loader);
+				sendProgress(thisCommand,bitmapData.getPixels(bitmapData.rect),bitmapData.rect.width,bitmapData.rect.height,"5555");
+				return;
+				
+				
+				
+				sendProgress(thisCommand, bitmapData.getPixels(bitmapData.rect),100,100);
 			return;
 				sendProgress(thisCommand, bitmapData);
 				

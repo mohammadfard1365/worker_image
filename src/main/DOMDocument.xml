@@ -49,11 +49,11 @@ this.addEventListener(Event.ENTER_FRAME, onFrame);]]></script>
                               </DOMFrame>
                          </frames>
                     </DOMLayer>
-                    <DOMLayer name="Layer 3" color="#FF800A" current="true" isSelected="true">
+                    <DOMLayer name="Layer 3" color="#FF800A">
                          <frames>
                               <DOMFrame index="0" keyMode="9728">
                                    <elements>
-                                        <DOMSymbolInstance libraryItemName="Symbol 2" name="a" selected="true" symbolType="button">
+                                        <DOMSymbolInstance libraryItemName="Symbol 2" name="a" symbolType="button">
                                              <matrix>
                                                   <Matrix tx="22.3" ty="374.6"/>
                                              </matrix>
@@ -65,7 +65,7 @@ this.addEventListener(Event.ENTER_FRAME, onFrame);]]></script>
                               </DOMFrame>
                          </frames>
                     </DOMLayer>
-                    <DOMLayer name="Layer 4" color="#FF4FFF">
+                    <DOMLayer name="Layer 4" color="#FF4FFF" current="true" isSelected="true">
                          <frames>
                               <DOMFrame index="0" keyMode="9728">
                                    <elements>
@@ -107,29 +107,29 @@ this.addEventListener(Event.ENTER_FRAME, onFrame);]]></script>
      </timelines>
      <persistentData>
           <PD n="ane.tmp.unzipped.folder" v="C:\Users\Persia\AppData\Local\Temp\Tmp_ANE_File_Unzipped_Packages"/>
-          <PD n="com.air.sdk.path"/>
+          <PD n="com.air.sdk.path" v="D:\My Program\Air Sdk\AIRSDK_Compiler"/>
      </persistentData>
      <PrinterSettings/>
      <publishHistory>
-          <PublishItem publishSize="163526" publishTime="1508333500"/>
-          <PublishItem publishSize="163478" publishTime="1508333407"/>
-          <PublishItem publishSize="163480" publishTime="1508333375"/>
-          <PublishItem publishSize="163468" publishTime="1508333347"/>
-          <PublishItem publishSize="163511" publishTime="1508333320"/>
-          <PublishItem publishSize="163311" publishTime="1508333242"/>
-          <PublishItem publishSize="163635" publishTime="1508333106"/>
-          <PublishItem publishSize="163631" publishTime="1508333070"/>
-          <PublishItem publishSize="163452" publishTime="1508332752"/>
-          <PublishItem publishSize="9226" publishTime="1508332744"/>
-          <PublishItem publishSize="163461" publishTime="1508332701"/>
-          <PublishItem publishSize="163615" publishTime="1508332619"/>
-          <PublishItem publishSize="163570" publishTime="1508332590"/>
-          <PublishItem publishSize="163405" publishTime="1508332497"/>
-          <PublishItem publishSize="9226" publishTime="1508332471"/>
-          <PublishItem publishSize="163595" publishTime="1508332432"/>
-          <PublishItem publishSize="9226" publishTime="1508331761"/>
-          <PublishItem publishSize="163395" publishTime="1508331279"/>
-          <PublishItem publishSize="163311" publishTime="1508331160"/>
-          <PublishItem publishSize="163433" publishTime="1508331146"/>
+          <PublishItem publishSize="163518" publishTime="1508573793"/>
+          <PublishItem publishSize="163404" publishTime="1508573769"/>
+          <PublishItem publishSize="163819" publishTime="1508573736"/>
+          <PublishItem publishSize="163688" publishTime="1508573587"/>
+          <PublishItem publishSize="105494" publishTime="1508573120"/>
+          <PublishItem publishSize="105548" publishTime="1508573100"/>
+          <PublishItem publishSize="105659" publishTime="1508573088"/>
+          <PublishItem publishSize="105578" publishTime="1508573063"/>
+          <PublishItem publishSize="105570" publishTime="1508573026"/>
+          <PublishItem publishSize="9191" publishTime="1508573008"/>
+          <PublishItem publishSize="105466" publishTime="1508572880"/>
+          <PublishItem publishSize="105508" publishTime="1508572864"/>
+          <PublishItem publishSize="105479" publishTime="1508572742"/>
+          <PublishItem publishSize="105530" publishTime="1508572698"/>
+          <PublishItem publishSize="105510" publishTime="1508572598"/>
+          <PublishItem publishSize="105388" publishTime="1508572579"/>
+          <PublishItem publishSize="9191" publishTime="1508572567"/>
+          <PublishItem publishSize="9191" publishTime="1508572556"/>
+          <PublishItem publishSize="105307" publishTime="1508572509"/>
+          <PublishItem publishSize="105355" publishTime="1508572473"/>
      </publishHistory>
 </DOMDocument>

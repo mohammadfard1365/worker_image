@@ -72,8 +72,8 @@
     <EventFormat>0</EventFormat>
     <EventCompress>7</EventCompress>
     <OverrideSounds>0</OverrideSounds>
-    <Version>31</Version>
-    <ExternalPlayer>android_20.0.0.204</ExternalPlayer>
+    <Version>34</Version>
+    <ExternalPlayer>android_23.0.0.274</ExternalPlayer>
     <ActionScriptVersion>3</ActionScriptVersion>
     <PackageExportFrame>1</PackageExportFrame>
     <PackagePaths></PackagePaths>
