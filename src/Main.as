@@ -57,6 +57,8 @@
 		private var counter:Number=1;
 		function mouseClicked(e:Event){
 			
+			_myWorker.command("loadFully", onProgress_image_fully, onResult_image, "1");
+			return;
 			for(var i:uint = 1;i<=24;i++){
 				loadX(counter);
 			}			
@@ -65,6 +67,9 @@
 			
 			
 				//e.currentTarget.alpha=0.1;			
+		}
+		private function onProgress_image_fully(p){
+			_txt.text=p;
 		}
 		private function loadX(name) {
 			//var imageLoader:Loader = new Loader();

@@ -10,6 +10,9 @@
 	import flash.system.LoaderContext;
 	import flash.system.ApplicationDomain;
 	import flash.system.SecurityDomain;
+	import flash.net.URLLoader;
+	import flash.net.URLRequest;
+	import flash.net.URLLoaderDataFormat;
 	
 	/**
 	 * ...
@@ -38,9 +41,29 @@
 			sendResult(thisCommand, $myParam);
 		}
 		
+		public function loadFully(name){
+			
+			var thisCommand:Function = arguments.callee;
+			try{
+				var request:URLRequest = new URLRequest("");				
+				//imageLoader.load(request);
+				var rlLoader:URLLoader = new URLLoader();
+				rlLoader.dataFormat = URLLoaderDataFormat.BINARY ; 
+				//rlLoader.addEventListener(Event.COMPLETE,byteLoaded);
+				rlLoader.load(request);
+				sendProgress(thisCommand, "FFFF");
+			}catch(e:Error){
+				sendProgress(thisCommand, e.getStackTrace());
+			}
+				
+
+		}
 		public function loadImage(b:ByteArray) {
 			var thisCommand:Function = arguments.callee;
 			var loader:Loader = new Loader();
+			
+			
+			
 			
 			loader.loadBytes(b);
 			//sendProgress(thisCommand,100);
@@ -53,7 +76,7 @@
 			
 				var bitmapData:BitmapData = new BitmapData(500, 500, false,0x000000);
 				
-				//bitmapData.draw(l.loader);
+				bitmapData.draw(l.loader);
 				sendProgress(thisCommand,bitmapData.getPixels(bitmapData.rect),bitmapData.rect.width,bitmapData.rect.height,"5555");
 				return;
 				
